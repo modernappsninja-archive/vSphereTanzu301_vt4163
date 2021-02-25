@@ -1,6 +1,6 @@
 ---
-title: "ModernApps Ninja New Course Template"
-linkTitle: "New Course Template"
+title: "vSphere with Tanzu 301"
+linkTitle: "vSphere with Tanzu 301"
 weight: 20
 menu:
   main:
