@@ -1,10 +1,27 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>vSphere with Tanzu 301 – Episode1: Setup vSphere with Tanzu Lab Environment - Networking and Routing</title><link>https://modernappsninja.github.io/vSphereTanzu301_vt4163/docs/episode1/</link><description>Recent content in Episode1: Setup vSphere with Tanzu Lab Environment - Networking and Routing on vSphere with Tanzu 301</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Fri, 09 Oct 2020 03:08:56 -0700</lastBuildDate><atom:link href="https://modernappsninja.github.io/vSphereTanzu301_vt4163/docs/episode1/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Setup Lab Environment Networking and Routing</title><link>https://modernappsninja.github.io/vSphereTanzu301_vt4163/docs/episode1/setuplab/</link><pubDate>Fri, 09 Oct 2020 03:15:26 -0700</pubDate><guid>https://modernappsninja.github.io/vSphereTanzu301_vt4163/docs/episode1/setuplab/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>vSphere with Tanzu 301 – Episode1: Setup vSphere with Tanzu Lab Environment - Networking and Routing</title><link>https://modernappsninja.github.io/vSphereTanzu301_vt4163/docs/episode1/</link><description>Recent content in Episode1: Setup vSphere with Tanzu Lab Environment - Networking and Routing on vSphere with Tanzu 301</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Fri, 09 Oct 2020 03:08:56 -0700</lastBuildDate><atom:link href="https://modernappsninja.github.io/vSphereTanzu301_vt4163/docs/episode1/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: vSphere with Tanzu Lab Setup: Networking and Routing</title><link>https://modernappsninja.github.io/vSphereTanzu301_vt4163/docs/episode1/setuplab/</link><pubDate>Fri, 09 Oct 2020 03:15:26 -0700</pubDate><guid>https://modernappsninja.github.io/vSphereTanzu301_vt4163/docs/episode1/setuplab/</guid><description>
+&lt;p>On the next page you will find the first in a series of videos where Ben Corrie walks you through the whole process of deploying and using vSphere with Tanzu.&lt;/p>
+&lt;p>This particular video focuses on the lab setup we&amp;rsquo;re going to use for the series, the networking prerequisites and setting up routing using Linux gateways.&lt;/p>
+&lt;p>This series does assume you have a lab environment with vCenter and ESXi hosts available for the lab work.&lt;/p>
+&lt;p>If you already have a lab set up with vSphere with Tanzu and workload management enabled, skip ahead to &lt;a href="https://modernappsninja.github.io/vSphereTanzu301_vt4163/vSphereTanzu301_vt4163/docs/episode4/">Episode 4&lt;/a>.&lt;/p>
+&lt;p>&lt;span style="text-decoration: underline;">Timeline of topics in the video&lt;/span>&lt;/p>
+&lt;p>00:00 vSphere With Tanzu Deep Dive Series&lt;br>
+03:31 My vSphere Environment&lt;br>
+15:29 Creating a Client VM for Network Validation&lt;br>
+24:54 Configuring a Gateway VM for Network Routing&lt;br>
+29:02 Testing the &amp;ldquo;Frontend&amp;rdquo; Gateway&lt;br>
+31:26 Configuring and Testing the &amp;ldquo;Workload&amp;rdquo; Gateway&lt;/p>
+&lt;p>The following links provide additional materials and references from the video:&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://github.com/corrieb/vspherewithtanzudemo">GitHub link to scripts&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://core.vmware.com/resource/vsphere-tanzu-quick-start-guide-v1a">Quick Start Guide&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.virtuallyghetto.com/2020/11/complete-vsphere-with-tanzu-homelab-with-just-32gb-of-memory.html">New simpler/faster lab setup from William Lam&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://www.virtuallyghetto.com/">William Lam&amp;rsquo;s Blog&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://cormachogan.com/">Cormac Hogan&amp;rsquo;s Blog&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://docs.vmware.com/en/VMware-vSphere/7.0/vmware-vsphere-with-tanzu/GUID-152BE7D2-E227-4DAA-B527-557B564D9718.html">vSphere Documentation&lt;/a>&lt;/li>
+&lt;/ul></description></item><item><title>Docs: Setup Lab Environment Networking Video</title><link>https://modernappsninja.github.io/vSphereTanzu301_vt4163/docs/episode1/setuplabvideo/</link><pubDate>Fri, 09 Oct 2020 03:11:43 -0700</pubDate><guid>https://modernappsninja.github.io/vSphereTanzu301_vt4163/docs/episode1/setuplabvideo/</guid><description>
 &lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-&lt;iframe src="https://www.youtube.com/embed/d6Hc2ceghIk" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
-&lt;/div></description></item><item><title>Docs: Setup Lab Environment Networking Video</title><link>https://modernappsninja.github.io/vSphereTanzu301_vt4163/docs/episode1/setuplabvideo/</link><pubDate>Fri, 09 Oct 2020 03:11:43 -0700</pubDate><guid>https://modernappsninja.github.io/vSphereTanzu301_vt4163/docs/episode1/setuplabvideo/</guid><description>
-&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-&lt;iframe src="https://www.youtube.com/embed/0sMxGW4eI0c" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
-&lt;/div></description></item><item><title>Docs: Test1</title><link>https://modernappsninja.github.io/vSphereTanzu301_vt4163/docs/episode1/test1/</link><pubDate>Fri, 09 Oct 2020 03:15:26 -0700</pubDate><guid>https://modernappsninja.github.io/vSphereTanzu301_vt4163/docs/episode1/test1/</guid><description>
+&lt;iframe src="https://www.youtube.com/embed/uSGujnlYpVc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video">&lt;/iframe>
+&lt;/div></description></item><item><title>Docs: Test1</title><link>https://modernappsninja.github.io/vSphereTanzu301_vt4163/docs/episode1/episode1test/</link><pubDate>Fri, 09 Oct 2020 03:15:26 -0700</pubDate><guid>https://modernappsninja.github.io/vSphereTanzu301_vt4163/docs/episode1/episode1test/</guid><description>
 &lt;h1 id="section-test">Section Test&lt;/h1>
 &lt;p>All Modernapps Ninja learning content is publicly accessible and available openly, however a free membership is required to take tests and recieve a certificate of completion for the course. You must first &lt;a href="https://modernapps.ninja/about/membership/">join the community&lt;/a> and &lt;a href="">register for this course&lt;/a> before attempting to submit a test.&lt;/p>
 &lt;p>Ninja tests use devops tools and processes so the testing system itself is educational and provides both experience and validation of foundational devops skills.&lt;/p>
