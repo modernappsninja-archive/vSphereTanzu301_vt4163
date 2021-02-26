@@ -12,7 +12,7 @@ ModernApps Ninja learning content is free and open to anyone to view, however to
 
 In addition to unlocking the ability to take tests and recieve course completion certificates, joining the ModernApps Ninja Community has a number of other benefits, and is a completely free program. 
 
-[Please click here to learn more about member benefits and to join the community!](https://modernapps.ninja/about/membership.html)
+[Please click here to learn more about member benefits and to join the community!](https://modernapps.ninja/about/membership)
 
 ### Register for this course
 
