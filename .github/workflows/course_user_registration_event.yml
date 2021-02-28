@@ -90,22 +90,26 @@ jobs:
           curl -H "Authorization: token ${{ secrets.NINJABOTGURU }}" \
           "https://raw.githubusercontent.com/${{ env.org_repo }}/main/static/admin/assets/coursecards/course_meta.yml" \
           -o /tmp/course_meta.yml
+          cat /tmp/course_meta.yml
       - name: pull member course card stub
         run: |
           curl -H "Authorization: token ${{ secrets.NINJABOTGURU }}" \
           "https://raw.githubusercontent.com/${{ env.org_repo }}/main/static/admin/assets/coursecards/memberrepocard/member_course_card_stub.md" \
           -o /tmp/member_course_card_stub.md
+          cat /tmp/member_course_card_stub.md
       - name: pull member course record template
         run: |
           curl -H "Authorization: token ${{ secrets.NINJABOTGURU }}" \
           "https://raw.githubusercontent.com/${{ env.org_repo }}/main/static/admin/assets/coursecards/memberrepocard/member_course_record.yml" \
           -o /tmp/member_course_record.yml
+          cat /tmp/member_course_record.yml
       - name: create member course record card
         run: |
           cd ${{ env.source_repo_name }}
           cat /tmp/course_meta.yml > /tmp/${{ github.event.repository.name }}.md
           cat /tmp/member_course_card_stub.md >> /tmp/${{ github.event.repository.name }}.md
           cat /tmp/member_course_record.yml >> /tmp/${{ github.event.repository.name }}.md
+          cat /tmp/${{ github.event.repository.name }}.md
           cat /tmp/${{ github.event.repository.name }}.md | base64 -w 0 > /tmp/${{ github.event.repository.name }}.md.base64
       - name: post member course record card to requesting member repo
         run: |
@@ -130,9 +134,11 @@ jobs:
           curl -H "Authorization: token ${{ secrets.NINJABOTGURU }}" \
           "https://api.github.com/repos/${{ env.org_repo }}/pulls/${{ github.event.number }}/files" \
           -o /tmp/pr_file_list.json
+          cat /tmp/pr_file_list.json
       - name: set envar pr_filename as filename value
         run: |
-          cat /tmp/pr_file_list.json | jq -r '.filename' > /tmp/pr_filename
+          cat /tmp/pr_file_list.json | jq -r '.[0].filename'
+          cat /tmp/pr_file_list.json | jq -r '.[0].filename' > /tmp/pr_filename
           echo pr_filename=$(cat /tmp/pr_filename) >> $GITHUB_ENV
       - name: gather merged member registration file sha
         run: |
