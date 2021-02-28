@@ -23,7 +23,7 @@ jobs:
       - name: curl member record file
         run: |
           curl -H "Authorization: token ${{ secrets.NINJABOTGURU }}" \
-          "https://api.github.com/repos/modernappsninja/admin-private/contents/static/admin/userdata/members/${{ github.event.sender.login }}_${{ github.event.sender.id }}.yml" \
+          "https://api.github.com/repos/modernappsninja/admin-private/contents/userdata/members/${{ github.event.sender.login }}_${{ github.event.sender.id }}.yml" \
           -o /tmp/raw_member_record_curl.json
           cat /tmp/raw_member_record_curl.json
       - name: set envar raw_member_curl_name
