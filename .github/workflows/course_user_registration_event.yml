@@ -116,7 +116,7 @@ jobs:
           curl -X PUT \
             -H "Authorization: token ${{ secrets.NINJABOTGURU }}" \
             -H "Accept: application/vnd.github.v3+json" \
-            -d '{"message": "Adding new member course record card for: ${{ github.event.repository.name }}", "content": "'$(cat /tmp/${{ github.event.repository.name  }}.md.base64)'"' \
+            -d '{"message": "Adding new member course record card for: ${{ github.event.repository.name }}", "content": "$(cat /tmp/${{ github.event.repository.name }}.md.base64)"}' \
             "https://api.github.com/repos/modernappsninjas/${{ github.event.sender.login }}/contents/content/english/course/${{ github.event.repository.name }}.md" \
             -o /tmp/record_card_post_response.json
           cat /tmp/record_card_post_response.json
