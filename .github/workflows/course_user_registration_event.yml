@@ -111,12 +111,16 @@ jobs:
           cat /tmp/member_course_record.yml >> /tmp/${{ github.event.repository.name }}.md
           cat /tmp/${{ github.event.repository.name }}.md
           cat /tmp/${{ github.event.repository.name }}.md | base64 -w 0 > /tmp/${{ github.event.repository.name }}.md.base64
+          echo record_card_string=$(cat /tmp/${{ github.event.repository.name }}.md.base64)
+          echo record_card_string=$(cat /tmp/${{ github.event.repository.name }}.md.base64) >> $GITHUB_ENV
       - name: post member course record card to requesting member repo
         run: |
+          echo $record_card_string
+          echo ${{ env.record_card_string }}
           curl -X PUT \
             -H "Authorization: token ${{ secrets.NINJABOTGURU }}" \
             -H "Accept: application/vnd.github.v3+json" \
-            -d '{"message": "Adding new member course record card for: ${{ github.event.repository.name }}", "content": "$(cat /tmp/${{ github.event.repository.name }}.md.base64)"}' \
+            -d '{"message": "Adding new member course record card for: ${{ github.event.repository.name }}", "content": "${{ env.record_card_string }}"}' \
             "https://api.github.com/repos/modernappsninjas/${{ github.event.sender.login }}/contents/content/english/course/${{ github.event.repository.name }}.md" \
             -o /tmp/record_card_post_response.json
           cat /tmp/record_card_post_response.json
