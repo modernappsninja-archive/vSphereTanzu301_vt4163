@@ -316,9 +316,10 @@ frequently.&lt;/p></description></item><item><title>Docs: How to submit tests</t
 &lt;p>The Answer sheet will open in Github&amp;rsquo;s web-based editor, similar to the image shown below:&lt;/p>
 &lt;p>&lt;img src="https://modernappsninja.github.io/vSphereTanzu301_vt4163/vSphereTanzu301_vt4163/admin/assets/images/blank_test_screen_example.png" alt="Example Test Response Sheet">&lt;/p>
 &lt;p>After you fill in your answer sheet, you will submit your responses as a git &lt;a href="https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests">pull request&lt;/a> following the instructions provided below, which will trigger a workflow that will grade your responses and provide your test grading sheet.&lt;/p>
-&lt;h3 id="additional-test-instructions">Additional Test Instructions&lt;/h3>
-&lt;p>If this is the first test you have taken, or if you have an questions at all about how to propely complete the test answer sheet or the test grading service, please review the full &lt;a href="">How to Take a Test Instructions&lt;/a>&lt;/p>
-&lt;h4 id="example-multiple-choice-single-answer-question">Example Multiple Choice Single Answer Question&lt;/h4>
+&lt;h3 id="full-test-instructions">Full Test Instructions&lt;/h3>
+&lt;p>If this is the first test you have taken, or if you have an questions at all about how to propely complete the test answer sheet or the test grading service, please review the full &lt;a href="https://modernapps.ninja/course_repo_template_ct8279/docs/reference/testinstructions/">How to Take a Test Instructions&lt;/a>.&lt;/p>
+&lt;p>It is important that you follow the instructions carefully to ensure the automated grading process completes successfully.&lt;/p>
+&lt;h3 id="heading">&lt;/h3>
 &lt;h5 id="question1-what-value-will-the-bash-shell-return-when-you-enter-the-command-echo-hello">Question1: What value will the bash shell return when you enter the command &lt;code>echo hello&lt;/code>?&lt;/h5>
 &lt;pre>&lt;code>Answers:
 a: banana
