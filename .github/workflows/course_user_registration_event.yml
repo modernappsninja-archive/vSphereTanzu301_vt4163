@@ -155,7 +155,8 @@ jobs:
           -o /tmp/merge_sha.tmp
           cat /tmp/merge_sha.tmp
           cat /tmp/merge_sha.tmp | jq -r '.sha' > /tmp/merge_sha
-          echo $(echo member_record_sha=$(cat /tmp/merge_sha)) >> GITHUB_ENV
+          cat /tmp/merge_sha
+          echo member_record_sha=$(cat /tmp/merge_sha) >> GITHUB_ENV
       - name: delete merged member registration file
         run: |
           echo "member_record_sha is: ${{ env.member_record_sha }}""
