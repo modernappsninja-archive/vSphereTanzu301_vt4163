@@ -125,7 +125,7 @@ jobs:
             "https://api.github.com/repos/modernappsninjas/${{ github.event.sender.login }}/contents/content/english/course/${{ github.event.repository.name }}.md" \
             -o /tmp/record_card_post_response.json
           cat /tmp/record_card_post_response.json
-      - name: merge pull request #merge the file so the user gets the git commit on their record, but then we will delete and recreate the file to ensure file consistency
+      - name: merge_pull_request
         run: |
           curl -X PUT \
           -H "Authorization: token ${{ secrets.NINJABOTGURU }}" \
@@ -135,17 +135,20 @@ jobs:
           -o /tmp/merge_post_response.json
           cat /tmp/merge_post_response.json
       - name: curl file list for pr
+        needs: merge_pull_request
         run: |
           curl -H "Authorization: token ${{ secrets.NINJABOTGURU }}" \
           "https://api.github.com/repos/${{ env.org_repo }}/pulls/${{ github.event.number }}/files" \
           -o /tmp/pr_file_list.json
           cat /tmp/pr_file_list.json
       - name: set envar pr_filename as filename value
+        needs: merge_pull_request
         run: |
           cat /tmp/pr_file_list.json | jq -r '.[0].filename'
           cat /tmp/pr_file_list.json | jq -r '.[0].filename' > /tmp/pr_filename
           echo pr_filename=$(cat /tmp/pr_filename) >> $GITHUB_ENV
       - name: gather merged member registration file sha
+        needs: merge_pull_request
         run: |
           echo "pr_filename is: ${{ env.pr_filename }}"
           curl \
@@ -157,7 +160,8 @@ jobs:
           cat /tmp/merge_sha.tmp | jq -r '.sha' > /tmp/merge_sha
           cat /tmp/merge_sha
           echo member_record_sha=$(cat /tmp/merge_sha) >> GITHUB_ENV
-      - name: delete merged member registration file
+      - name: delete_merged_member_registration_file
+        needs: merge_pull_request
         run: |
           echo "member_record_sha is: ${{ env.member_record_sha }}""
           curl -X DELETE \
@@ -169,6 +173,7 @@ jobs:
           cat /tmp/file_delete_response.json
           echo inprogress=$(echo "status: in-progress" | base64 -w 0) >> $GITHUB_ENV         
       - name: create new member registration file from validated github metadata
+        needs: delete_merged_member_registration_file
         run: |
           inprogress=$(echo "status: in-progress" | base64 -w 0)
           curl -X PUT \
