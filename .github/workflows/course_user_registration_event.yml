@@ -151,7 +151,7 @@ jobs:
           curl \
           -H "Authorization: token ${{ secrets.NINJABOTGURU }}" \
           -H "Accept: application/vnd.github.v3+json" \
-          "https://api.github.com/repos/${{ env.org_repo }}/contents/${{ env.pr_filename }})" \
+          "https://api.github.com/repos/${{ env.org_repo }}/contents/${{ env.pr_filename }}" \
           -o /tmp/merge_sha.tmp
           cat /tmp/merge_sha.tmp
           cat /tmp/merge_sha.tmp | jq -r '.sha' > /tmp/merge_sha
