@@ -106,7 +106,7 @@ jobs:
       - name: create member course record card
         run: |
           cd ${{ env.source_repo_name }}
-          sed -i '/^draft =/c\draft: false' config.toml
+          sed -i '/^draft =/c\draft: false' /tmp/course_meta.yml
           cat /tmp/course_meta.yml > /tmp/${{ github.event.repository.name }}.md
           cat /tmp/member_course_card_stub.md >> /tmp/${{ github.event.repository.name }}.md
           cat /tmp/member_course_record.yml >> /tmp/${{ github.event.repository.name }}.md
