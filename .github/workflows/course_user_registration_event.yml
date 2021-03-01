@@ -166,10 +166,11 @@ jobs:
           cat /tmp/file_delete_response.json         
       - name: create new member registration file from validated github metadata
         run: |
+          in-progress=$(echo "status: in-progress" | base64 -w 0)
           curl -X PUT \
           -H "Authorization: token ${{ secrets.NINJABOTGURU }}" \
           -H "Accept: application/vnd.github.v3+json" \
-          -d '{"message": "Updating Member Record File For '${{ github.event.sender.login }}'","content":"'$(echo "status: in-progress" | base64 -w 0)'"}' \
+          -d '{"message": "Updating Member Record File For '${{ github.event.sender.login }}'","content":"$in-progress"}' \
           "https://api.github.com/repos/${{ env.org_repo }}/contents/static/admin/userdata/registered_members/${{ github.event.sender.login }}.yml" \
           -o /tmp/member_repo_post_response.json
           cat /tmp/member_repo_post_response.json     
